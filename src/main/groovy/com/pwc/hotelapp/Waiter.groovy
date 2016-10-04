@@ -28,6 +28,11 @@ class Waiter {
         return this.tables
     }
 
+    /**
+     * This add a table to waiter and also checks if there are already four tables assigned or not
+     * @param table object needs to be assigned
+     * @throws HotelException When a manager tries to assign the fifth table to a waiter
+     */
     List<Table> addTable(Table table) throws HotelException {
         if (this.tablesAssigned() >= Waiter.TABLES) {
             throw new HotelException(HotelException.Type.MAXIMUM_TABLE_ASSIGNED)
@@ -37,6 +42,10 @@ class Waiter {
         return this.tables
     }
 
+    /**
+     * This is used to creates waiters.
+     * @param number of waiters needs to be created.
+     */
     public static List<Waiter> intiatesWaiterList(int totalWaiters) {
         List<Waiter> waiters = []
 
@@ -48,6 +57,10 @@ class Waiter {
         return waiters
     }
 
+    /**
+     * This is used to select a particular waiter to be assigned for a table.
+     * @param list of waiters.
+     */
     private static selectWaiter(List<Waiter> waiterList) {
         Scanner scan = new Scanner(System.in)
         waiterList.each {

@@ -9,6 +9,10 @@ class Restaurant {
     String name
     List<Table> tables = []
 
+    /**
+     * This is used to select a particular restaurant from the list of restaurants.
+     * @param list of restaurants available.
+     */
     private static selectRestaurant(List<Restaurant> restaurantList) {
         Scanner scan = new Scanner(System.in)
         restaurantList.each {

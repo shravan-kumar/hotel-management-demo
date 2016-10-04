@@ -7,6 +7,11 @@ class Table {
 
     Integer tableNumber
 
+
+    /**
+     * This is used to creates tables.
+     * @param number of tables needs to be created.
+     */
     public static List<Table> intiatesTableList(int startingNumber) {
         List<Table> tableList = []
 
@@ -18,6 +23,10 @@ class Table {
         return tableList
     }
 
+    /**
+     * This is used to select a particular table to be assigned to a waiter.
+     * @param list of tables.
+     */
     private static selectTable(List<Table> tableList) {
         Scanner scan = new Scanner(System.in)
         tableList.each {
